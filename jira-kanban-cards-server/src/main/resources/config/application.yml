@@ -1,0 +1,5 @@
+riptide:
+  clients:
+    jira:
+      # set at least one property to keep the "jira" client
+      recordMetrics: true
