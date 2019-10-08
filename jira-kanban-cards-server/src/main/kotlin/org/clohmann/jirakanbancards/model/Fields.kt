@@ -6,5 +6,7 @@ data class Fields(
     val status: Status,
     val assignee: String?,
     val reporter: Reporter,
-    val priority: Priority
+    val priority: Priority,
+    val customfield_14537: Double
+
 )

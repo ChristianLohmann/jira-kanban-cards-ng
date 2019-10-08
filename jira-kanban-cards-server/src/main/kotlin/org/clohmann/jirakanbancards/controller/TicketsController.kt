@@ -49,7 +49,8 @@ class TicketsController(
                         name = "dhoppenstedt",
                         displayName = "Dickie Hoppenstedt"
                     ),
-                    assignee = null
+                    assignee = null,
+                    customfield_14537 = 8.0
                 )
             ),
             Ticket(
@@ -78,7 +79,8 @@ class TicketsController(
                         name = "ohoppenstedt",
                         displayName = "Opa Hoppenstedt"
                     ),
-                    assignee = null
+                    assignee = null,
+                    customfield_14537 = 3.0
                 )
             )
         )

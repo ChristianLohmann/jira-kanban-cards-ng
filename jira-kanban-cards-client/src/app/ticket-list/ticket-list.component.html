@@ -1,15 +1,15 @@
 <div class="ticket" *ngFor="let ticket of tickets">
   <div class="header">
-  <div class="priority" [class.item-clearance]="ticket.fields.priority.name"></div>
-<!--  <div class="issuetype" ng-class="trim(ticket.fields.issuetype.name) | lowercase"></div>-->
-<!--  <div class="epic" ng-if="ticket.fields.epicLink" ng-class="'epicgroup_' + getEpicNumber(ticket.fields.epicLink)">-->
-<!--    {{ticket.fields.epicName ? ticket.fields.epicName : ticket.fields.epicLink}}-->
+    <div class="priority" [ngClass]="ticket.fields.priority.name | lowercase"></div>
+    <div class="issuetype" [ngClass]="ticket.fields.issuetype.name | lowercase"></div>
+    <!--  <div class="epic" ng-if="ticket.fields.epicLink" ng-class="'epicgroup_' + getEpicNumber(ticket.fields.epicLink)">-->
+    <!--    {{ticket.fields.epicName ? ticket.fields.epicName : ticket.fields.epicLink}}-->
+    <!--  </div>-->
+    <div class="number">{{ticket.key}}</div>
   </div>
-<!--  <div class="number">{{ticket.key}}</div>-->
-<!--  &lt;!&ndash;</div>&ndash;&gt;-->
-<!--  <div class="summary">{{ticket.fields.summary}}</div>-->
-<!--  <div class="rank" ng-if="ticket.rank">{{ticket.fields.rank}}</div>-->
-<!--  <div class="reporter">{{ticket.fields.reporter.displayName}}</div>-->
-<!--  <div class="assignee">{{ticket.fields.assignee.displayName}}</div>-->
-<!--  <div class="fix-version" ng-if="ticket.fields.fixVersions">{{ticket.fields.fixVersions[0].name}}</div>-->
+  <div class="summary">{{ticket.fields.summary}}</div>
+  <div class="estimation" ng-if="ticket.rank">{{ticket.fields.customfield_14537}}</div>
+  <div class="reporter">{{ticket.fields.reporter.displayName}}</div>
+  <div class="assignee">{{ticket.fields.assignee.displayName}}</div>
+  <div class="fix-version" ng-if="ticket.fields.fixVersions">{{ticket.fields.fixVersions[0].name}}</div>
 </div>

@@ -162,13 +162,13 @@ div.ticket div.assignee:before {
   color: $darker-gray;
 }
 
-div.ticket div.rank {
+div.ticket div.estimation {
   float: right;
   white-space: nowrap;
 }
 
-div.ticket div.rank:before {
-  content: "Rank: ";
+div.ticket div.estimation:before {
+  content: "Estimation: ";
   color: $darker-gray;
 }
 
