@@ -15,8 +15,10 @@ export class TicketListComponent implements OnInit {
   constructor(private ticketService: TicketService) { }
 
   ngOnInit() {
-    // const searchRequest = new SearchRequest();
-    // this.ticketService.findByJql()
+    const searchRequest = new SearchRequest('auth', 'some jql');
+    this.ticketService.findByJql(searchRequest).subscribe(data => {
+      this.tickets = data;
+    });
   }
 
 }

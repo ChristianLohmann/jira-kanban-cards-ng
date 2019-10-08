@@ -8,12 +8,14 @@ import org.clohmann.jirakanbancards.model.SearchRequest
 import org.clohmann.jirakanbancards.model.Status
 import org.clohmann.jirakanbancards.model.Ticket
 import org.springframework.beans.factory.annotation.Qualifier
+import org.springframework.web.bind.annotation.CrossOrigin
 import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 import org.zalando.riptide.Http
 
 @RestController
+@CrossOrigin(origins = ["http://localhost:4200"])
 class TicketsController(
     @Qualifier("jira") private val http: Http
 ) {
